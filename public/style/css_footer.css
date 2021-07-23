@@ -1,0 +1,45 @@
+#footer{
+	width: 100%;
+	height: 260px;
+	background: white;
+	display: block;
+}
+#footer_up{
+	width: 1300px;
+	height: 210px;
+	margin: 0 auto;
+	font: 16px/35px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+}
+#footer_up a{
+	color: #288ad6;
+}
+ul li{
+	list-style-type: none;
+}
+#lichsumuahang{
+	width: 25%;
+	float: left;
+}
+#gioithieucongty{
+	width: 25%;
+	float: left;
+}
+#goimuahang{
+	width: 35%;
+	float: left;
+}
+#footer_up img{
+	vertical-align: middle;
+}
+#fanpage{
+	width: 15%;
+	float: left;
+}
+#footer_down{
+	background: #f0f0f0;
+	width: 100%;
+	color: #999;
+	text-align: center;
+	line-height: 3;
+	display: inline-block;
+}

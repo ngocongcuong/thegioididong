@@ -1,0 +1,173 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+i {
+	margin: 0 5px 0 0;
+}
+.header {
+	background-color: #222222;
+	width: 1200px; 							/*-------------css header */
+	margin: 0 auto;
+}
+.header li {
+	display: inline-block;
+	position: relative;
+	align-items: center;
+	line-height: 50px;						/*------------- các thẻ li      */
+	color: #c0c0c0;
+	padding: 0px 10px;
+	font-family: arial, tahoma,"Times New Roman", Times, serif;
+	font-size: 18px;
+}
+.header li a {
+	line-height: 50px;
+	font-size: 16px;
+	color: #c0c0c0;
+	font-family: arial, tahoma,"Times New Roman", Times, serif;
+}
+.header>ul>li {
+	border-left: 1px solid #444444;
+}
+.header>ul>li:last-child {
+	border: none;
+	float: right;
+}
+.header>ul>li:first-child {
+	width: 200px;
+}
+.header li ul li {
+	display: none;
+	width: 114px;
+	background-color: #ccc;
+}
+.sub {
+	position: absolute;
+}
+.header li:hover .sub {
+	box-shadow: 0 0 2px 1px gray;
+}
+.header li:hover ul li {
+	display: block;
+}
+.sub li a {
+	color: black;
+	text-align: center;
+	display: inline-block;
+	width: 134px;
+	float: left;
+	margin-left: -10px;
+}
+.sub li:hover a{
+	color: #000;
+	background-color: #ccc;
+}
+/*------------- kết thúc css header--------------------------------------------------------------      */
+.container {
+	width: 1200px;
+	display: block;
+	margin: 0 auto;
+	background-color: lightgray;
+}
+.sub2 {
+	display: none;
+}
+.menu ul li:hover .sub2 {
+	display: block;
+}
+.menu {
+	width: 223px;
+	border: 1px solid #ccc;
+	float: left;
+}
+.chucnang {
+	line-height: 50px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+	padding-left: 10px;
+}
+.menu-doc li i:nth-child(2) {
+	float: right;
+}
+.menu-doc {
+}
+.box-main {
+	float: right;
+ 	width: 974px;
+ 	display: inline-block;
+}
+.navigation {
+
+}
+.content {
+
+}
+table, th, td{
+    border:1px solid #868585;
+}
+table{
+    border-collapse:collapse;
+    font-size: 18px;
+    width: 974px;
+}
+td, th{
+	padding: 5px 20px 5px 10px;
+}
+th {
+	background-color: skyblue;
+}
+.tbl-nhanvien tr:nth-child(odd) {
+    background-color: #eee;
+}
+.content>a {
+	padding:10px;
+	line-height: 40px;
+	color: white;
+	background-color: #3399ff;
+	border-radius: 4px;
+}
+/*-------------------------------------css thêm sản phẩm----------*/
+.content>div {
+	background-color: #eeeeee;
+	padding-bottom: 20px;
+}
+.box-addsp {
+	width: 600px;
+	margin: 0 auto;
+}
+.content form {
+	color: black;
+	font-family: arial, tahoma,"Times New Roman", Times, serif;
+	position: relative;
+}
+.slc-add {
+	padding: 8px;
+}
+h2 {
+	color: #0000ff;
+}
+.add-sp input[type=text] {
+	line-height: 30px;
+	font-size: 27px;
+	position: absolute;
+	left: 150px;
+}
+.add-sp select, .add-sp input[type=file], .add-sp input[type=submit] {
+	left: 150px;
+	position: absolute;
+}
+.add-sp input[type=submit] {
+	padding: 5px;
+	margin-top: 5px;
+	background-color: gray;
+}
+.css-er {
+	color: red;
+	font-size: 13px;
+}

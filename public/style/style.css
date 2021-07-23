@@ -1,0 +1,244 @@
+*{
+	margin:0;
+	padding: 0;
+}
+html{
+	font-family: arial, helvetica, sans-serif;
+}
+s {
+	text-decoration: line-through !important;
+}
+body {
+	font-family: arial, helvetica, sans-serif !important;
+}
+.prew {
+	left: 0;
+}
+.next {
+	right: 0;
+}
+.icon {
+	top: 150px;
+	position: absolute;
+	cursor: pointer;
+	opacity: 0.3;
+	font-size: 46px;
+	color: #333;
+	background-color: #f5f5f5;
+}
+/* kết thúc nút back - next*/
+#container {
+	margin: 0 auto;
+	width: 1200px;
+}
+.banner {
+	position: relative;
+}
+.san-pham-hot {
+	background-color: #fed100;
+	border-radius: 5px;
+	padding-bottom: 10px;
+}
+.san-sale {
+	font-style: italic;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px 10px;
+}
+.slider {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	padding: 0 10px;
+}
+.products {
+	width: 3600px;
+	transition: all 1s;
+	position: relative;
+	display: flex;
+}
+.sph {
+	float: left;
+	width: 228px;
+	height: 459px;
+	background-color: white;
+	position: relative;
+	margin-right: 10px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.sph .item {
+	width: 198px;
+	height: 439px;
+	padding:10px 15px;
+	background-color: white;
+}
+.item-label {
+	font-size: 11px;
+	line-height: 12px;
+	padding: 3px;
+	background-color: #f1f1f1;
+	color: #333;
+	display: inline-block;
+}
+a {
+	text-decoration: none;
+}
+.item-img {
+	height: 245px;
+}
+.item a:hover img {
+	position: relative;
+	padding: 5px 0 20px;
+	transition: all 0.5s;
+}
+.sph .item-img img {
+			display: block;
+			width: 198px;
+			padding: 25px 0 0;
+			box-sizing: content-box;
+}
+.detail {
+	width: 200px;
+	display: block;
+	padding-top: 20px;
+	color: #288ad6;
+}
+.price_after {
+	color: black;
+	font-weight: bold;
+}
+.price {
+	color: red;
+	font-weight: lighter;
+}
+.add_to_card {							/*nút thêm giỏ hàng*/
+	background-color: #00BFFF;
+	color: white;
+	line-height: 30px;
+	bottom:5px;
+	border-radius: 3px;
+	position: absolute;
+	padding: 0 10px;
+}
+.timkiem {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #fed100;
+}
+.result_ {
+	display: block;
+	background-color: #fed100;
+}
+.result_search {
+	padding:10px 35%;
+}
+.box-left, .box-right {
+	display: inline-block;
+	font-size: 27px;
+}
+.sph {
+	float: left;
+	width: 228px;
+	height: 459px;
+	background-color: white;
+	position: relative;
+}
+.sph img {
+	display: block;
+	width: 198px;
+	padding: 25px 0 0;
+	box-sizing: content-box;
+}
+														/* Navigation */
+.navigation a {
+	display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #288ad6;
+    padding: 0 10px 0 0;
+    line-height: 32px;
+}
+.navigation {
+	margin: 10px 0;
+}
+.nutnavigation {
+	color: #999;
+	font-size: 14px;
+	padding: 2px 5px 0 0;
+}									/* css chi tiết sản phẩm */
+.chitietsp h4 {
+	letter-spacing: 1px;
+}
+.box-main {
+	margin-top: 15px;
+	border-top: 1px solid #e0e0e0;
+	padding-top: 15px;
+	display: block;
+}
+.box-left {
+	width: 710px;
+	float: left;
+	display: block;
+}
+.mota_dai img {
+	width: 710px;
+}
+.box-right {
+	width: 460px;
+	float: right;
+	margin-left: 30px;
+	display: block;
+}
+.buy-chitiet {
+	background-color: green;
+    border-radius: 2px;
+    padding: 3px 120px;
+    color: white;
+}
+.lienquan {
+	display: inline-block;
+	clear: both;
+}
+.product .item img {
+	width: 209px;
+	display: block;
+	padding: 25px 0 0;
+	box-sizing: content-box;
+}
+.product {
+	display: inline-block;
+	width: 240px;
+	height: 459px;
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+	border-top: 1px solid rgb(241,241,241);
+	border-right: 1px solid rgb(241,241,241);
+	border-bottom: 1px solid rgb(241,241,241);
+}
+.product:first-child,.product:nth-child(5n+1) {
+	border-left: 1px solid rgb(241,241,241);    /* không chạy được - đã chạy được */
+}
+.product .item {
+	overflow: hidden;
+	padding:10px 15px;
+	background-color: white;
+}
+.product:hover {
+	box-shadow: 0 2px 12px rgb(0 0 0 / 12%);
+}
+.dssp {
+	display: inline-block;
+}
+.find-box {
+	display: inline-block;
+	width: 1200px;
+	margin-top: 5px;
+	padding: 10px 20px;
+	background-color: #E6F1D8;
+}
+label { cursor: pointer; }

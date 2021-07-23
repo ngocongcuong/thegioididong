@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Helvetica, Arial, tahoma, sans-serif;
+	color: #362;
+}
+body {
+	background-image: url("../img/background-login.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.fm-login {
+	margin: 10% auto;
+	width: 600px;
+	height: 400px;
+	border-radius: 3px;
+	background-color: rgba(242,265,270,0.5);
+}
+form {
+	height: 400px;
+	padding: 20px 20px 20px 20px;
+	border: 1px solid rgb(242,234,234);
+}
+th {
+	font-size: 24px;
+}
+input, .taikhoan {
+	font-size: 24px;
+	background-color: rgba(1,1,1,0);
+}
+.taikhoan input {
+	border: 1px solid #993;
+	padding: 6px 1px;
+}
+tr:last-child {
+	text-align: center;
+}
+input[type=submit] {
+	width: 550px;
+	font-size: 27px;
+	color: white;
+	line-height: 55px;
+	background-color: #009900;
+	border: none;
+	cursor: pointer;
+	border-radius: 3px;
+}
+input[type=submit]:hover {
+	background-color: #00aa00;
+}
+a {
+	float: right;
+}

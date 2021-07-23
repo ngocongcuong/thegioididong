@@ -1,0 +1,75 @@
+
+table {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+tr {
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.container div{
+	margin:0 auto;
+	text-align: center;
+}
+.bt {
+	font-size: 24px;
+	color: white;
+	padding: 5px 8px;
+	border-radius: 3px;
+}
+.sub {
+	background-color: #fed100;
+}
+.add {
+	background-color: green;
+}
+.del {
+	background-color: #ff0000;
+}
+td:last-child {
+	width: 170px;
+}
+.frmtt {
+	padding-top: 50px;
+}
+form[name=frm-thanhtoan] {
+	width: 600px;
+	height: 200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+input[type=text] {
+	height: 30px;
+}
+input[type=email] {
+	height: 30px;
+}
+input[type=submit] {
+	height: 40px;
+	width: 100px;
+}
+
+.cartempty {
+	padding-top: 100px;
+	width: 600px;
+}
+.cartempty .cartnew-empty {
+	background-image: url(../img/cart-mobile.png);
+	background-size: 125px 152px;
+	width: 76px;
+	height: 59px;
+	display: inline-block;
+	background-position: 0px -245px;
+}
+.backhome {
+	border: 1px solid #288ad6;
+	display: block;
+	line-height: 35px;
+	border-radius: 4px;
+	font-weight: 600;
+	color: #288ad6;
+	margin: 10px 0;
+}
