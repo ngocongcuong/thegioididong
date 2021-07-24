@@ -9,6 +9,8 @@ if (isset($_GET['id'])) {
 	$product_lienquan = $db->get_limit('sanpham', array('catalog_id'=>$productchitiet[0]['catalog_id']),5);
 	//lấy thương hiệu ở bảng thương hiệu bằng productchitiet['thuonghieu']
 	$thuonghieu = $db->get('thuonghieu', array('id'=>$productchitiet[0]['thuonghieu']));
+	//lấy hình ảnh slide
+	$img_slider = $db->get('img_product', array('id_product'=>$id));
 }
 require_once './view/giaodiensanpham.php';
 ?>

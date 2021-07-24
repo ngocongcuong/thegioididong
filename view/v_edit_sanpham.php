@@ -4,6 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="./public/style/font-awesome/css/fontawesome-all.min.css">
 	<link rel="stylesheet" type="text/css" href="./public/style/css_page_admin.css?v=<?php echo time(); ?>">
+	<script src="./public/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <div class="header">
@@ -133,8 +134,22 @@
 						<td><input type="text" name="amount" value="<?php echo $data[0]['amount']; ?>"></td>
 					</tr>
 					<tr>
-						<td><label for="fileSelect">Chọn ảnh:</label></td>
+						<td><label for="fileSelect">Thay ảnh mới:</label></td>
 						<td><input type="file" name="photo" id="fileSelect"></td>
+					</tr>
+					<tr>
+						<td>Ảnh mở hộp</td>
+						<td>
+							<input type="file" name="img-product[]" multiple="multiple">
+						</td>
+					</tr>
+					<tr>
+						<td>Mô tả chi tiết</td>
+						<td>
+							<textarea cols="150" rows="30" class="ckeditor" name="mota_sp" id="mota_sp">
+								<?php echo $data[0]['content']; ?>
+							</textarea>
+						</td>
 					</tr>
 					<tr>
 						<td>
@@ -152,5 +167,11 @@
 
 
 	<!--<a href="?controller=logout">Đăng xuất</a>-->
+<script type="text/javascript">
+	CKEDITOR.replace( 'mota_sp', {
+	filebrowserBrowseUrl: './public/ckfinder/ckfinder.html',
+	filebrowserUploadUrl: './public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+	} );
+</script>
 </body>
 </html>
