@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 17, 2021 lúc 03:11 PM
--- Phiên bản máy phục vụ: 10.4.14-MariaDB
--- Phiên bản PHP: 7.2.34
+-- Thời gian đã tạo: Th7 25, 2021 lúc 11:01 AM
+-- Phiên bản máy phục vụ: 10.4.17-MariaDB
+-- Phiên bản PHP: 7.3.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -73,6 +73,46 @@ INSERT INTO `danhgia` (`name`, `rating`, `id`, `tel`, `email`, `content`, `id_pr
 ('Pi Pi', 4, 14, '043500634', '', 'Mua dk 3 tuần thấy mọi thứ cũg ok .mà có cái bật 4g mà mạng vẫn yếu hơn cái note 10+ cũ ... tìm mọi cách rồi thấy vẫn vậy', 7),
 ('Lý Nhã Kỳ', 4.5, 15, '0962531555', '', 'lkjl;kj;lkj;lkjkljghgh', 7),
 ('Ngô Công Cường edit', 3.8, 16, '09090909', 'skybnred@gmail.com', 'ádfasdfasdf', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `img_product`
+--
+
+CREATE TABLE `img_product` (
+  `id_img` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL,
+  `img_link` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `img_product`
+--
+
+INSERT INTO `img_product` (`id_img`, `id_product`, `img_link`) VALUES
+(1, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-1-org.jpg'),
+(2, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-2-org.jpg'),
+(3, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-3-org.jpg'),
+(4, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-4-org.jpg'),
+(5, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-5-org.jpg'),
+(6, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-6-org.jpg'),
+(7, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-7-org.jpg'),
+(8, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-8-org.jpg'),
+(9, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-9-org.jpg'),
+(10, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-10-org.jpg'),
+(11, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-11-org.jpg'),
+(12, 7, './public/img/slide-description-product/samsung-galaxy-a52-5g-den-12-org.jpg'),
+(13, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-1-1-org1.jpg'),
+(14, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-2-1-org1.jpg'),
+(15, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-3-1-org1.jpg'),
+(16, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-4-1-org1.jpg'),
+(17, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-5-1-org1.jpg'),
+(18, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-6-1-org1.jpg'),
+(19, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-7-1-org1.jpg'),
+(20, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-8-1-org1.jpg'),
+(21, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-9-1-org1.jpg'),
+(22, 9, './public/img/slide-description-product/xiaomi-redmi-9t-6gb-xanh-duong-10-1-org1.jpg');
 
 -- --------------------------------------------------------
 
@@ -199,7 +239,7 @@ CREATE TABLE `sanpham` (
   `price` int(11) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL,
   `img_link` varchar(100) DEFAULT NULL,
-  `content` varchar(1000) DEFAULT NULL,
+  `content` mediumtext DEFAULT NULL,
   `price_after` int(11) NOT NULL,
   `manhinh` varchar(100) DEFAULT NULL,
   `hedieuhanh` varchar(100) DEFAULT NULL,
@@ -235,8 +275,8 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`id_product`, `name`, `price`, `amount`, `img_link`, `content`, `price_after`, `manhinh`, `hedieuhanh`, `camerasau`, `cameratruoc`, `chip`, `ram`, `rom`, `sim`, `pin`, `sac`, `ketnoi`, `hang`, `cpu`, `harddrive`, `card`, `connector`, `dacbiet`, `thietke`, `kichthuoc`, `thoiluongpin`, `matdongho`, `chucnang`, `ngayramat`, `tienich`, `catalog_id`, `thuonghieu`, `mota_link`) VALUES
-(7, 'Samsung Galaxy A52 5G testtttttttt', 10490000, 7763, './public/img/sanpham/samsung-galaxy-a52-5g-thumb-black-600x600-600x600.jpg', 'Samsung Galaxy A52 5G', 10990000, 'Super AMOLED6.5\"Full HD+', 'Android 11', 'Chính 64 MP & Phụ 12 MP, 5 MP, 5 MP', '32 MP', 'Snapdragon 750G 5G', '8 GB', '128 GB', '2 Nano SIMHỗ trợ 5G', '4500 mAh', '25 W', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 2, NULL),
-(9, 'Xiaomi Redmi 9T (6GB/128GB)', 4590000, 120, './public/img/sanpham/4.jpg', 'Xiaomi Redmi 9T (6GB/128GB', 4500000, 'IPS LCD6.53\"Full HD+', 'Android 10', 'Chính 48 MP & Phụ 8 MP, 2 MP, 2 MP', '8 MP', 'Snapdragon 662', '6 GB', '128 GB', '\r\n2 Nano SIMHỗ trợ 4G', '6000 mAh', '18 W', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 5, NULL),
+(7, 'Samsung Galaxy A52 5G test ok', 10490000, 1000, './public/img/sanpham/312.jpg', '<p><img alt=\"\" src=\"/ckfinder/userfiles/files/hinh%20anh%20sp/samsung-galaxy-a52-5g-note.jpg\" style=\"height:525px; width:700px\" /></p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>B&agrave;i viết đ&aacute;nh gi&aacute;</strong></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Samsung Galaxy A52 56 ra mắt được trang&nbsp;bị con chip Snapdragon 750G c&oacute; hỗ trợ 5G tốc độ cao, trải nghiệm đ&atilde; mắt với m&agrave;n h&igrave;nh Super AMOLED đi c&ugrave;ng với dung lượng pin lớn v&agrave; thuộc ph&acirc;n kh&uacute;c tầm trung rất dễ tiếp cận với mọi người d&ugrave;ng.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Thiết kế hiện đại, mở đầu xu hướng</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Samsung Galaxy A52 5G sở hữu thiết kế nguy&ecirc;n khối với mặt lưng được phủ một lớp nh&aacute;m, c&aacute;c chi tiết thừa được bỏ đi tạo n&ecirc;n tổng thể đơn giản, sang trọng.</span></p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"/ckfinder/userfiles/files/hinh%20anh%20sp/samsung-galaxy-a52-5g-001.jpg\" style=\"height:466px; width:700px\" /></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">B&ecirc;n cạnh đ&oacute;, Samsung Galaxy A52 5G c&ograve;n sở hữu khả năng kh&aacute;ng nước v&agrave; bụi chuẩn IP67 gi&uacute;p m&aacute;y c&oacute; thể chống nước ở độ s&acirc;u 1 m&eacute;t tối đa 30 ph&uacute;t, gi&uacute;p bạn y&ecirc;n t&acirc;m trải nghiệm trong mọi ho&agrave;n cảnh v&agrave; m&ocirc;i trường.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/hinh%20anh%20sp/samsung-galaxy-a52-5g-11.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Hệ thống &acirc;m thanh v&ograve;m với hai loa một ở tr&ecirc;n v&agrave; một ở dưới c&ugrave;ng của điện thoại, cho bạn những trải nghiệm chơi game hay ph&uacute;t gi&acirc;y giải tr&iacute; c&ugrave;ng phim ảnh l&ecirc;n tầm cao mới nhờ chất &acirc;m chuẩn điện ảnh.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/hinh%20anh%20sp/samsung-galaxy-a52-5g-14.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Samsung đem tới cho người ti&ecirc;u d&ugrave;ng c&aacute;c sắc m&agrave;u thời thượng bao gồm: T&iacute;m Thanh Lịch, Đen Bản Lĩnh, Trắng Tối Giản v&agrave; Xanh Năng Động để bạn thoả th&iacute;ch thể hiện c&aacute; t&iacute;nh ri&ecirc;ng của m&igrave;nh</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/hinh%20anh%20sp/samsung-galaxy-a52-5g-15.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:20px\">M&agrave;n h&igrave;nh giải tr&iacute; rực rỡ đa sắc m&agrave;u</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">M&agrave;n h&igrave;nh l&agrave; một trong những n&acirc;ng cấp đ&aacute;ng ch&uacute; &yacute; nhất tr&ecirc;n Galaxy A52 5G khi được hỗ trợ tần số qu&eacute;t cực cao 120 Hz, mọi trải nghiệm vuốt chạm, cuộn trang của bạn sẽ c&agrave;ng ấn tượng hơn.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/hinh%20anh%20sp/samsung-galaxy-a52-5g-002-1.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Ấn tượng ban đầu với m&agrave;n h&igrave;nh của Galaxy A52 5G l&agrave; kiểu m&agrave;n h&igrave;nh Infinity-O rộng 6.5 inch với độ s&aacute;ng l&ecirc;n đến 800 nits, cho chất lượng hiển thị lu&ocirc;n sắc n&eacute;t kể cả khi sử dụng dưới trời nắng gắt.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/hinh%20anh%20sp/samsung-galaxy-a52-5g-28.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Ngo&agrave;i ra, m&aacute;y c&ograve;n sở hữu c&ocirc;ng nghệ m&agrave;n h&igrave;nh Super AMOLED mang đến chất lượng hiển thị sắc n&eacute;t, h&igrave;nh ảnh tươi tắn cho bạn tận hưởng c&aacute;c chương tr&igrave;nh giải tr&iacute; hấp dẫn.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/hinh%20anh%20sp/samsung-galaxy-a52-5g-004.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:20px\">Hiệu năng bức ph&aacute; c&ugrave;ng Snapdragon 750G</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Galaxy A52 5G được trang bị con chip Snapdragon 750G với quy tr&igrave;nh 8 nm hiện đại mang đến năng lượng kh&ocirc;ng giới hạn cho mọi trải nghiệm.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/hinh%20anh%20sp/samsung-galaxy-a52-5g-003.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Kết hợp với 8 GB RAM cho bạn đa nhiệm được tốt hơn, t&igrave;nh trạng tải lại ứng dụng sẽ được hạn chế. Bộ nhớ trong 128 GB đi k&egrave;m đủ lớn để bạn lưu giữ những video, h&igrave;nh ảnh m&agrave; kh&ocirc;ng lo bị đầy.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/24t7n2021/samsung-galaxy-a52-5g-17.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Samsung c&ograve;n trang bị tr&ecirc;n Galaxy A52 5G chế độ Game Booster cho khả năng tự động tối ưu h&oacute;a smartphone với tựa game đang chạy, đồng thời kiểm so&aacute;t nhiệt độ v&agrave; theo d&otilde;i thời lượng pin để mang tới cho người d&ugrave;ng trải nghiệm gaming đỉnh cao nhất.</span></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:20px\">Cụm 4 camera 64 MP hỗ trợ chống rung quang học OIS</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Cụm camera tr&ecirc;n Samsung Galaxy A52 5G năm nay cũng rất đ&aacute;ng mong chờ khi sở hữu c&aacute;c th&ocirc;ng số khủng bao gồm: Camera ch&iacute;nh độ ph&acirc;n giải 64 MP f/1.8, camera g&oacute;c rộng 12 MP f/2.2, cho g&oacute;c nh&igrave;n 123 độ, camera độ s&acirc;u 5 MP v&agrave; cuối c&ugrave;ng l&agrave; camera macro 5 MP.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/24t7n2021/samsung-galaxy-a52-5g-005.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Camera ch&iacute;nh với độ ph&acirc;n giải 64 MP hỗ trợ chống rung quang học OIS cao cấp đảm bảo chất lượng h&igrave;nh ảnh lu&ocirc;n lu&ocirc;n ổn định, lấy n&eacute;t ch&iacute;nh x&aacute;c kể cả khi hoạt động ở điều kiện thiếu s&aacute;ng.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/24t7n2021/samsung-galaxy-a52-5g-010.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\">Camera g&oacute;c rộng 12 MP với g&oacute;c nh&igrave;n 123 độ tăng th&ecirc;m g&oacute;c chụp thu mọi cảnh vật thi&ecirc;n nhi&ecirc;n nhi&ecirc;n h&ugrave;ng vĩ, ảnh nh&oacute;m đ&ocirc;ng người thật dễ d&agrave;ng.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><img alt=\"\" src=\"/ckfinder/userfiles/files/24t7n2021/samsung-galaxy-a52-5g-006.jpg\" style=\"height:466px; width:700px\" /></span></p>\r\n', 10990099, 'Super AMOLED6.5\"Full HD+', 'Android 11', 'Chính 64 MP & Phụ 12 MP, 5 MP, 5 MP', '32 MP', 'Snapdragon 750G 5G', '8 GB', '128 GB', '2 Nano SIMHỗ trợ 5G', '4500 mAh', '25 W', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL),
+(9, 'Xiaomi Redmi 9T (6GB/128GB)', 4590000, 120, './public/img/sanpham/4.jpg', '<p>Xiaomi Redmi 9T (6GB/128GB</p>\r\n', 4500000, 'IPS LCD6.53\"Full HD+', 'Android 10', 'Chính 48 MP & Phụ 8 MP, 2 MP, 2 MP', '8 MP', 'Snapdragon 662', '6 GB', '128 GB', '\r\n2 Nano SIMHỗ trợ 4G', '6000 mAh', '18 W', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL),
 (11, 'Realme C20', 2290000, 186, './public/img/sanpham/5.jpg', 'Real C20', 2190000, 'LCD6.5\"HD+', 'Android 10', '8 MP', '5 MP', 'MediaTek Helio G35', '2 GB', '32 GB', '2 Nano SIMHỗ trợ 4G', '\r\n5000 mAh', '10 W', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 6, NULL),
 (13, 'Samsung Galaxy S21 5G', 20990000, 1, './public/img/sanpham/6.jpg', 'Samsung Galaxy S21 5G', 20049000, 'Dynamic AMOLED 2X6.2\"Full HD+', 'Android 11', 'Chính 12 MP & Phụ 64 MP, 12 MP', '10 MP', 'Exynos 2100', '8 GB', '128 GB', '2 Nano SIM hoặc 1 Nano SIM + 1 eSIMHỗ trợ 5G', '4000 mAh', '25 W', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 2, NULL),
 (15, 'Vivo Y12s (3GB/32GB)', 2990000, 11, './public/img/sanpham/7.jpg', 'Vivo Y12s (3GB/32GB)', 2890000, 'IPS LCD6.51\"HD+', 'Android 10', 'Chính 13 MP & Phụ 2 MP', '8 MP', 'MediaTek Helio P35', '3 GB', '32 GB', '2 Nano SIMHỗ trợ 4G', '5000 mAh', '10 W', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 4, NULL),
@@ -387,6 +427,12 @@ ALTER TABLE `danhgia`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `img_product`
+--
+ALTER TABLE `img_product`
+  ADD PRIMARY KEY (`id_img`);
+
+--
 -- Chỉ mục cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
@@ -432,6 +478,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `danhgia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT cho bảng `img_product`
+--
+ALTER TABLE `img_product`
+  MODIFY `id_img` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT cho bảng `nhanvien`

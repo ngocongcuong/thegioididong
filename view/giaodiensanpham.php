@@ -115,17 +115,17 @@
 				  	<?php } ?>
 				  </div>
 				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-				    <span class="carousel-control-prev-icon" aria-hidden="true" style="border: 1px solid rgba(76, 175, 80, 0.7)"></span>
+				    <span class="carousel-control-prev-icon" style="background-color: #2E9AFE; width: 25px;height: 25px;" aria-hidden="true" style="border: 1px solid rgba(76, 175, 80, 0.7)"></span>
 				    <span class="sr-only">Previous</span>
 				  </a>
 				  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-				    <span class="carousel-control-next-icon" aria-hidden="true" style="border: 1px solid rgba(76, 175, 80, 0.7)"></span>
+				    <span class="carousel-control-next-icon " style="background-color: #2E9AFE; width: 25px;height: 25px;" aria-hidden="true" style="border: 1px solid rgba(76, 175, 80, 0.7)"></span>
 				    <span class="sr-only">Next</span>
 				  </a>
 				</div>
 
 				<div class="content-main">
-					<img src="<?php echo $value['img_link'] ?>">
+					<!-- <img src="<?php echo $value['img_link'] ?>"> -->
 					<?php echo $value['content'] ?>
 				</div>
 				<div class="nut-hienthi">
