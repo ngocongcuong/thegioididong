@@ -15,7 +15,6 @@ class database{
 	public function __construct(){
 		$this->connect();
 	}
-	//xây dựng hàm update dữ liệu đơn hàng
 	public function insert($table, $data = array()){
 		//tạo cấu trúc insert
 		$keys= array_keys($data);
@@ -30,6 +29,23 @@ class database{
 		//bước 3 chạy câu lệnh sql
 		$query = mysqli_query($this->conn, $sql);
 		return $query;
+	}
+	//xây dựng hàm update dữ liệu đơn hàng
+	public function insert_return_id($table, $data = array()){
+		//tạo cấu trúc insert
+		$keys= array_keys($data);
+		$field= implode(',', $keys);
+		$value_str = '';
+		foreach ($data as $key => $value) {
+			$value_str .= "'$value',";
+		}
+		$value_str = rtrim($value_str, ',');
+		$sql = "INSERT INTO $table ($field) VALUES ($value_str)";
+	
+		//bước 3 chạy câu lệnh sql
+		$query = mysqli_query($this->conn, $sql);
+		$last_id = $this->conn->insert_id;
+		return $last_id;
 	}
 	//SELECT * FROM sanpham WHERE 
 	//catalog_id = 1 

@@ -138,15 +138,15 @@
 						<td><input type="file" name="photo" id="fileSelect"></td>
 					</tr>
 					<tr>
-						<td>Ảnh mở hộp</td>
+						<td>Ảnh mở hộp<br>(chọn nhiều ảnh)</td>
 						<td>
 							<input type="file" name="img-product[]" multiple="multiple">
 						</td>
 					</tr>
-					<tr>
+					<tr style="height: 1000px;">
 						<td>Mô tả chi tiết</td>
 						<td>
-							<textarea cols="150" rows="30" class="ckeditor" name="mota_sp" id="mota_sp">
+							<textarea class="ckeditor" name="mota_sp" id="mota_sp">
 								<?php echo $data[0]['content']; ?>
 							</textarea>
 						</td>

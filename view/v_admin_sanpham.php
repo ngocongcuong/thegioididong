@@ -63,58 +63,9 @@
 		</div>
 		<div class="content">
 			<!----------------------------------------------------------------thêm sản phẩm--------->
-			<div>
-			<div class="box-addsp">
-			<form class="add-sp" action="?controller=add_sanpham" method="POST" enctype="multipart/form-data">
-				<h2>Thêm sản phẩm mới</h2>
-				<span class="lb-ip">Tên sản phẩm</span><input type="text" name="tensanpham">
-				<p class="css-er"><?php if (isset($error['tensanpham'])) { echo "<br>".$error['tensanpham'];} ?></p><br>
-				<span class="lb-ip">Giá trị ban đầu</span><input type="text" name="price"><br>
-				<p class="css-er"><?php if (isset($error['giasanpham'])) { echo "<br>".$error['giasanpham'];} ?></p><br>
-				<span class="lb-ip">Giá trị hiện tại</span><input type="text" name="price_after"><br>
-				<p class="css-er"><?php if (isset($error['giasanpham_new'])) { echo "<br>".$error['giasanpham_new'];} ?></p><br>
-				<span class="lb-ip">Số lượng</span><input type="text" name="amount">
-				<p class="css-er"><?php if (isset($error['soluong'])) { echo "<br>".$error['soluong'];} ?></p><br>
-				<span>Danh mục</span><select name="catalogid" class="slc-add left">
-					<option value="1">Điện thoại</option>
-					<option value="2">Máy tính bảng</option>
-					<option value="3">Laptop</option>
-					<option value="4">Đồng hồ thông minh</option>
-					<option value="5">Đồng hồ thời trang</option>
-				</select><br><br>
-				<span>Thương hiệu</span><select name="thuonghieu" class="slc-add right">
-					<option value="1">APPLE</option>
-					<option value="2">SAMSUNG</option>
-					<option value="3">OPPO</option>
-					<option value="4">VIVO</option>
-					<option value="5">XIAOMI</option>
-					<option value="6">REALME</option>
-					<option value="7">Vsmart</option>
-					<option value="8">GOOGLE</option>
-					<option value="9">NOKIA</option>
-					<option value="10">HUAWWEI</option>
-					<option value="11">MOBELL</option>
-					<option value="12">ITEL</option>
-					<option value="13">MASSTEL</option>
-					<option value="14">ENERGIZER</option>
-					<option value="15">ASUS</option>
-					<option value="16">HP</option>
-					<option value="17">LENOVO</option>
-					<option value="18">ACER</option>
-					<option value="19">DELL</option>
-					<option value="20">LG</option>
-					<option value="21">MSI</option>
-					<option value="22">CANON</option>
-					<option value="23">SONY</option>
-				</select><br><br>
-				<label for="fileSelect">Filename:</label>
-				<input type="file" name="photo" id="fileSelect">
-				<p class="css-er"><?php if (isset($error['photo'])) { echo $error['photo'];} ?></p>
-				<input type="submit" name="submit" value="Thêm sản phẩm"><br>
-			</form>
-			</div>
-			</div>
+
 			<!----------------------------------------------------------------thêm sản phẩm--------->
+			<a href="?controller=themsanpham">Thêm sản phẩm</a>
 			<table class="tbl-nhanvien">
 				<tr>
 					<th>STT</th>

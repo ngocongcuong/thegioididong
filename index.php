@@ -54,6 +54,9 @@ switch ($controller) {
 	case 'add_sanpham':
 		require_once './controller/c_add_sanpham.php';
 		break;
+	case 'themsanpham':
+		require_once './controller/c_add_sanpham.php';
+		break;
 	case 'xuly_sanpham':
 		require_once './controller/c_edit_sanpham.php';
 		break;

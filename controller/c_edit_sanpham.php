@@ -139,7 +139,7 @@ if ($user[0]['lv']==1) {
 			break;
 		case 'xoa_sanpham':
 			$dlt = $db->delete('sanpham', array('id_product'=>$id));
-			echo $dlt;
+			$db->delete('img_product', array('id_product'=>$id));
 			header('location: ?controller=product');
 			break;
 	}
