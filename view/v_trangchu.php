@@ -57,7 +57,7 @@
 			<a href="./index.php" class="header_logo"><i class="icon-logo"></i></a>
 			<div class="bordercol"></div>
 			<a href="#" class="header_address">
-				<p>Xem giá khuyến mãi tại</p>
+				<p style="margin: unset;">Xem giá khuyến mãi tại</p>
 				<span>La Khê, Hà Đông</span>
 			</a>
 			<form method="get" action="index.php" name="frm-search" class="frm-search">
@@ -247,7 +247,7 @@
 			<div class="row">
 				<?php foreach ($product2 as $key => $value) { ?>
 				<div class="col-lg-2dot4">
-					<div class="product">
+					<div class="product" style="border: unset;margin-bottom: 15px;">
 						<div class="item">
 							<a href="?controller=giaodienchitiet&id=<?php echo $value['id_product'] ?>">
 								<div class="item-label"><span>Trả góp 0%</span></div>
@@ -287,7 +287,7 @@
 						foreach ($product3 as $key => $value) {		
 					?>
 					<div class="col-lg-2dot4">
-						<div class="product">
+						<div class="product" style="border: unset;">
 							<div class="item">
 								<a href="?controller=giaodienchitiet&id=<?php echo $value['id_product'] ?>">
 									<div class="item-label"><span>Trả góp 0%</span></div>
@@ -327,7 +327,7 @@
 						foreach ($product4 as $key => $value) {		
 					?>
 					<div class="col-lg-2dot4">
-						<div class="product">
+						<div class="product" style="border: unset;">
 							<div class="item">
 								<a href="?controller=giaodienchitiet&id=<?php echo $value['id_product'] ?>">
 									<div class="item-label"><span>Trả góp 0%</span></div>
