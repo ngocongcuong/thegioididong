@@ -125,7 +125,6 @@
 				</div>
 
 				<div class="content-main">
-					<img src="<?php echo $value['img_link'] ?>">
 					<?php echo $value['content'] ?>
 				</div>
 				<div class="nut-hienthi">
